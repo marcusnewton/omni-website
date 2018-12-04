@@ -1,4 +1,4 @@
-// Init Semantic UI behaviour
+// Init Semantic UI modules
 $(function() {
 
   // Sticky
@@ -11,17 +11,58 @@ $(function() {
     offset: 80
   });
 
-  // show dropdown on hover
-  $('.main.menu  .ui.dropdown').dropdown({
-    on: 'hover'
-  });
-
 });
 
 // Event listeners
 // Article
-document.querySelector('#articles-menu').addEventListener('click', (event) => {
+const menuItems = [
+  // {
+  //   menu: "menu1",
+  //   id: "header1"
+  // },
+  {
+    menu: "menu2",
+    id: "header2"
+  },
+  {
+    menu: "menu3",
+    id: "header3"
+  },
+  {
+    menu: "menu4",
+    id: "header4"
+  },
+  {
+    menu: "menu5",
+    id: "header5"
+  }
+]
+
+// Logo scroll to top
+document.getElementById('menu0').addEventListener('click', (event) => {
   event.preventDefault()
 
-  document.querySelector('#scroll').scrollIntoView({behavior: "smooth", block: "center"})
+  document.body.scrollIntoView({behavior: "smooth", block: "center"})
+})
+
+// Scroll to header
+menuItems.forEach(function(item) {
+  if (item) {
+    document.getElementById(item.menu).addEventListener('click', (event) => {
+      event.preventDefault()
+
+      document.getElementById(item.id).scrollIntoView({behavior: "smooth", block: "center"})
+    })
+  }
+})
+
+// Socials
+document.querySelector('#email').addEventListener('click', (event) => {
+  event.preventDefault()
+  window.location.href='mailto:mail@example.org'
+})
+
+document.querySelector('.linkedin').addEventListener('click', (event) => {
+  event.preventDefault()
+  window.open('https://www.linkedin.com/company/omni-project','_blank')
 })
