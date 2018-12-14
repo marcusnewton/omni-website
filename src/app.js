@@ -11,22 +11,17 @@ $(function() {
     offset: 80
   });
 
+  // Modal
+  $('.ui.modal')
+  .modal()
+  ;
 });
 
 // Event listeners
-// Article
 const menuItems = [
-  // {
-  //   menu: "menu1",
-  //   id: "header1"
-  // },
   {
-    menu: "menu2",
-    id: "header2"
-  },
-  {
-    menu: "menu3",
-    id: "header3"
+    menu: "menu1",
+    id: "header1"
   },
   {
     menu: "menu4",
@@ -38,12 +33,15 @@ const menuItems = [
   }
 ]
 
+
 // Logo scroll to top
 document.getElementById('menu0').addEventListener('click', (event) => {
   event.preventDefault()
 
-  document.body.scrollIntoView({behavior: "smooth", block: "center"})
+  document.body.scrollIntoView({behavior: "smooth", block: "start"})
 })
+
+let scrollTarget
 
 // Scroll to header
 menuItems.forEach(function(item) {
@@ -51,7 +49,12 @@ menuItems.forEach(function(item) {
     document.getElementById(item.menu).addEventListener('click', (event) => {
       event.preventDefault()
 
-      document.getElementById(item.id).scrollIntoView({behavior: "smooth", block: "center"})
+      // Taking menu height into account
+      scrollTarget = document.getElementById(item.id).getBoundingClientRect()
+      window.scrollBy({
+        top: scrollTarget.top - 80,
+        behavior: 'smooth'
+      })
     })
   }
 })
@@ -59,10 +62,24 @@ menuItems.forEach(function(item) {
 // Socials
 document.querySelector('#email').addEventListener('click', (event) => {
   event.preventDefault()
-  window.location.href='mailto:mail@example.org'
+  window.location.href='mailto:team@omniapp.org'
 })
 
 document.querySelector('.linkedin').addEventListener('click', (event) => {
   event.preventDefault()
   window.open('https://www.linkedin.com/company/omni-project','_blank')
 })
+
+// Register interest
+document.getElementById('register').addEventListener('click',(event) => {
+  event.preventDefault()
+
+  $('.basic.modal')
+    .modal('show')
+  ;
+})
+
+// Reveal canvas on load
+window.onload = () => {
+  document.getElementById('header').style.backgroundColor = "rgba(27,28,29,0)"
+}
