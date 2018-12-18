@@ -83,3 +83,6 @@ document.getElementById('register').addEventListener('click',(event) => {
 window.onload = () => {
   document.getElementById('header').style.backgroundColor = "rgba(27,28,29,0)"
 }
+
+// Parallax init
+const rellax = new Rellax('.rellax')

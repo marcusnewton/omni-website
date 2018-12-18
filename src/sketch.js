@@ -11,8 +11,8 @@ function setup() {
 function setFlock() {
   // Set number of boids proportional to canvas area
   let boidCount = width*height*0.00008
-  if (boidCount > 100) {
-    boidCount = 100
+  if (boidCount > 200) {
+    boidCount = 200
   }
   // Add an initial set of boids into the system
   for (var i = 0; i < boidCount; i++) {

@@ -7,6 +7,17 @@ header {
   height: 100vh;
   background-color: rgba(27,28,29,1);
   transition: background-color 1s;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  -o-transition: background-color 1s;
+}
+header.immediate {
+  transition: background-color 0s;
+  -webkit-transition: background-color 0s;
+  -moz-transition: background-color 0s;
+  -ms-transition: background-color 0s;
+  -o-transition: background-color 0s;
 }
 canvas {
   position:absolute;
@@ -15,9 +26,6 @@ canvas {
   width:100%;
   vertical-align: baseline;
   z-index:-1;
-}
-a.item {
-
 }
 .main.container .text.container {
   margin-top: 3em;
@@ -46,6 +54,7 @@ p {
   margin: 0em;
   margin-top: 32vh;
   font-size: 5em;
+  font-family: ;
   background-image: radial-gradient(rgba(27, 28, 29, 100%), rgba(27, 28, 29, 0%));
   text-shadow: 0px 0px 40px rgb(27,28,29);
 }
@@ -58,8 +67,28 @@ p {
 
 @media screen and (max-width: 700px) {
   .masthead .ui.header {
+    margin-top: 30vh;
+    font-size: 4em;
+  }
+  #submast {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .masthead .ui.header {
     margin-top: 28vh;
     font-size: 3em;
+  }
+  #submast {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .masthead .ui.header {
+    margin-top: 26vh;
+    font-size: 2em;
   }
   #submast {
     font-size: 1em;
