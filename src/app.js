@@ -40,6 +40,11 @@ document.getElementById('menu0').addEventListener('click', (event) => {
 
   document.body.scrollIntoView({behavior: "smooth", block: "start"})
 })
+document.getElementById('mobile-menu0').addEventListener('click', (event) => {
+  event.preventDefault()
+
+  document.body.scrollIntoView({behavior: "smooth", block: "start"})
+})
 
 let scrollTarget
 

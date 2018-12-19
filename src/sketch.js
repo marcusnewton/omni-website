@@ -37,7 +37,7 @@ class Boid {
         this.position = createVector(x, y);
         this.maxspeed = 1; // Maximum speed
         this.maxforce = 0.05; // Maximum steering force
-        this.size = random(32,40);
+        this.size = random(32,36);
         this.r = this.size/2;
     }
     run(boids) {
@@ -55,8 +55,8 @@ class Boid {
         var sep = this.separate(boids); // Separation
         var coh = this.cohesion(boids); // Cohesion
         // Arbitrarily weight these forces
-        sep.mult(2.5);
-        coh.mult(1.0);
+        sep.mult(2.0);
+        coh.mult(0.5);
         // Add the force vectors to acceleration
         this.applyForce(sep);
         this.applyForce(coh);

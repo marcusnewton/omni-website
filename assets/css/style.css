@@ -65,6 +65,10 @@ p {
   font-weight: normal;
 }
 
+#mobile-menu {
+  display: none !important;
+}
+
 @media screen and (max-width: 700px) {
   .masthead .ui.header {
     margin-top: 30vh;
@@ -92,5 +96,11 @@ p {
   }
   #submast {
     font-size: 1em;
+  }
+  #desktop-menu {
+    display: none !important;
+  }
+  #mobile-menu {
+    display: block !important;
   }
 }

@@ -21,16 +21,25 @@
 
 <body>
   <header id="header">
-    <div class="ui four item inverted borderless main menu">
+    <div class="ui four item inverted borderless main menu" id="desktop-menu">
       <div class="ui text container">
         <a class="header item" id="menu0">
          <img class="logo" src="assets/img/logo_sky.png">
          Omni
         </a>
-        <a class="item" id="menu1">Our Mission</a>
+        <a class="item" id="menu1">The Mission</a>
         <a class="item" id="menu4">Why Holochain?</a>
         <a class="item" id="menu5">Contact</a>
       </div>
+    </div>
+
+    <div class="ui one item inverted borderless main menu" id="mobile-menu">
+      <div class="ui text container">
+        <a class="header item" id="mobile-menu0">
+         <img class="logo" src="assets/img/logo_sky.png">
+         Omni
+        </a>
+		  </div>
     </div>
 
     <div class="ui vertical basic masthead center aligned segment">
@@ -43,21 +52,24 @@
 
   <div class="ui main container">
     <div class="ui text container">
-      <div class="ui large header" id="header1">Our Mission</div>
+      <div class="ui large header" id="header1">The Mission</div>
       <p>At <i>The Omni Project</i>, we’re helping build the next generation of scholarly communications. The academic publishing system is deeply broken — the dissemination of research has become tightly intertwined with the commercial interests of publishers and the growing importance of reputation in academia.</p>
       <p>We want to help break this industry deadlock, by disentangling research output from profit and prestige. The best way to achieve this is by giving academics the tools to collectively build an alternative model from the ground-up, which can allow a fundamentally better and more sustainable system to emerge.</p>
-      <p>Our vision for <i>The Omni Project</i> is to start bringing the world's academics closer together, leveraging the collective intelligence of academic communities, and scaling academic discussion to an unprecedented level. After all, this is what the Internet was originally intended for, and only then can academia re-align with its original purpose — to share new knowledge with the world.</p>
+      <p>Our vision for <i>The Omni Project</i> is to start bringing the world's academics closer together, leveraging the collective intelligence of academic communities, and scaling academic discussion to an unprecedented level. Afterall, this is what the Internet was originally intended for, and only then can academia re-align with its original purpose — to share new knowledge with the world.</p>
     </div>
     <div class="ui text container">
       <div class="ui header" id="header2">Omni Platform</div>
-      <p>After a year of extensive research, our team is currently building Omni — a platform for writing, sharing, discussing and reviewing research papers with academic communities. We're not creating another journal or publisher either. Omni is a public, digital space for academics to share their work without barriers, quickly reach their intended audiences and receive feedback from anyone in the academic community.</p>
-      <p>We're essentially building a "scholary commons" for more accessible, open and participatory research. In fact, the entire research process can be streamlined on Omni (from conception to dissemination) which can drastically improve the flow of information and ideas:</p>
+      <p>We're not creating another repository, portal, journal or publisher. We're helping build a community that cares about good quality research, where academics and scholars can contribute to anything and get rewarded for it. Being a good researcher on the platform means sharing, editing, reviewing and discussing research with others, and as long as you're making quality and consistant contributions, you're recognised as a good academic.</p>
+      <p>Omni is an open-source, distributed web application that enables scholars to write, share, discuss and review research papers with academic communities, without any intermediaries.</p>
+      <p>This essentially describes a "scholarly commons" where research is made as open and participatory as possible. Omni is a place for academics to freely share their research, and open it up to feedback and improvement from the community, regardless of what stage it's at. Every user is acknowledged for the contributions they make, and every piece of information shared is given a unique ID. This has the potential to drastically improve the flow of information, organisation of knowledge and evolution of ideas.</p>
+      <p>Omni is also pioneering new incentive and reputation systems for academics and scholars. By rewarding those for contributing value to the research process (rather than focusing solely on research outcomes) we can promote more valid, scientific and organic knowledge creation. Also, the technology that Omni is built on can allow the community to experiment with different currency models, in order to arrive at the most desirable, sustainable solution that works for everyone.</p>
+      <p>At a glance, Omni offers the following capabilities:</p>
       <div class="ui bulleted list">
-        <div class="item">Write articles using an advanced online editor, or upload your own</div>
+        <div class="item">Write articles using an online editor, or upload your own files</div>
         <div class="item">Share articles with communities, get feedback and start discussions</div>
         <div class="item">Discover the best, most recent and controversial papers in your field</div>
         <div class="item">Review papers and help the community decide what valid research looks like</div>
-        <div class="item">Get rewarded for all your contributions, and build a more meaningful reputation</div>
+        <div class="item">Manage your reputation, which reflects the quality and consistancy of your contributions</div>
       </div>
     </div>
   </div>
@@ -75,10 +87,10 @@
       <p>No paper is ever complete or final. Authors can write their papers within Omni, receive feedback from the community and easily make changes. Every edit is documented, archived and made transparent. Invite co-authors to collaborate, and even choose to keep your work offline until its ready to share.</p>
       <div class="ui small header">Get feedback from day one</div>
       <p>All papers on Omni are open to feedback from anyone in the academic community. Rather than writing a full peer-review, users can create discussion threads at various points in the paper. Readers can upvote/downvote comments, and also suggest edits or flag issues to the author (and if approved, are credited as contributors to the paper).</p>
-      <div class="ui small header">Engage with your communities</div>
+      <div class="ui small header">Engage with communities</div>
       <p>Communities can form around any field or topic in academia, where research papers are assessed and reviewed according to their own measures of quality, validity and significance. Academics can follow the most recent, popular and controversial papers in a field, and discuss them with other like-minded people.</p>
-      <div class="ui small header">Reputation that makes sense</div>
-      <p>You won't find an impact factor or h-index on Omni. Instead, an academic's reputation is determined by a vast range of factors — including how well they engage with communities and the quality of their contributions. In other words, the more you contribute to academic research, the better your reputation becomes.</p>
+      <div class="ui small header">Manage your reputation</div>
+      <p>Omni uses a vast range of factors to determine your reputation: including the quality and consistancy of your articles, comments, edits and reviews. Your reputation can't grow without bound either; instead it reflects your overall ability to perform what the community considers important for an academic.</p>
     </div>
   </div>
 
@@ -88,22 +100,38 @@
 
   <div class="ui main container">
     <div class="ui text container">
+      <div class="ui medium header" id="header3">Who We're Helping</div>
+      <p>What types of academics and research papers are best suited for Omni? Who would benefit from using this platform? We're looking for people who are:</p>
+      <div class="ui bulleted list">
+        <div class="item">Frustrated with the frequently long and inefficient process to publication, and would prefer make their work as accessible as possible</div>
+        <div class="item">Holding work which is unlikely to be published (or was rejected), such as replication studies, null results, and papers which aren't "flashy" or significant enough</div>
+        <div class="item">Undertaking research in emerging or interdisciplinary fields, with a journal that isn't entirely relevant or doesn't have a broader enough audience</div>
+        <div class="item">Interested in discussing research with peers and other academics in the community, outside of universities and conferences</div>
+        <div class="item">Looking for an easier, faster way to review papers, rather than writing out lengthy responses in traditional peer-review</div>
+        <div class="item">Involved with open-access journals (such as editors), and are looking to further the reach and impact of its published articles</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui main container">
+    <div class="ui text container">
       <div class="ui large header" id="header4">Why Holochain?</div>
-      <p>The Omni application will be hosted on a distributed network of computers, rather than centralised servers. It'll use a fully distributed, peer-to-peer protocol called <a href="https://www.holochain.org">Holochain</a> — a truly decentralised, democratic, secure Internet, with the capacity for large-scale social coordination. In other words, the academic community can essentially become a fully autonomous organisation, without the need for a middleman or top-down incentive structure.</p>
-      <p>We're building Omni on a system of value creation, credit, transparency, accountability and community engagement (principles that academia <i>should</i> be built on). The technology that Omni is using can allow the following:</p>
+      <p>We wanted Omni to be governed entirely its users, meaning no single entity can have control over the platform (including us). The Omni application will be hosted on a fully distributed, peer-to-peer protocol called <a href="http://www.holochain.org">Holochain</a>. It's a truly decentralised, democratic and secure Internet, with the capacity for large-scale social coordination. Holochain is a new protocol for distributing web applications, as well as a crypto-accounting system for deep forms of wealth or value (such as Omni's system for tracking contributions). With Holochain, the academic community can become a fully autonomous organisation, without the need for a middleman or top-down incentive structure.</p>
+      <p>This technology is enabling us to build Omni on a system of value creation, compensation, transparency, accountability and community engagement (principles that academia *should* be built on). In summary, Holochain can enable the following:</p>
 
       <div class="ui bulleted list">
-        <div class="item">Protecting authorship through cryptographically secure and tamper-proof data</div>
-        <div class="item">Tracking all contributions and rewarding those for creating value</div>
-        <div class="item">Driving more productive behaviour through an accountability-based system</div>
+        <div class="item">Tracking and acknowledging all actions made by users</div>
+        <div class="item">Protecting authorship and intellectual property rights</div>
+        <div class="item">Rewarding anybody for creating or contributing value</div>
+        <div class="item">Incentivising more productive and collaborative behaviour</div>
       </div>
 
       <div class="ui small header">Own your work</div>
-      <p>Holochain ensures that all users and data on Omni have digital signatures, meaning true authorship can always be verified. Authors are also protected under a Creative Commons license, and no longer have to relinquish their ownership rights to publishing companies.</p>
-      <div class="ui small header">Open-source</div>
-      <p>We're building Omni as an open-source application. We're inviting the community to help contribute to its development on Github, and any proposed changes to the application will be resolved democratically.</p>
+      <p>Holochain ensures that all users and data on Omni have digital signatures, meaning true authorship can always be verified. Authors are also protected under a Creative Commons license, and no longer have to relinquish their ownership rights to publishers.</p>
+      <div class="ui small header">Open source</div>
+      <p>We're building Omni as an open source application. We're inviting the community to help contribute to its development on Github, and any proposed changes to the application will be resolved democratically and by consensus.</p>
       <div class="ui small header">Free to use, forever</div>
-      <p>We strongly believe in making knowledge and research as accessible as possible. Therefore, we're planning for the Omni platform to be completely free. In order to fund the project, we'll be relying on altruistic support and funding.</p>
+      <p>We strongly believe in making knowledge and research as accessible as possible. Therefore, Omni will be completely free, but we can't work on this full time unless we have enough funding support.</p>
     </div>
   </div>
 
@@ -112,9 +140,9 @@
       <div class="ui large header" id="header5">
         Contact Us</div>
 
-      <p>If you want to learn more, have any ideas, or you’re interested in joining the team, let us know! We’re undertaking a massive project and we’re looking for as much support and collaboration as possible. Feel free to contact us and sign up to our mailing list here:</p>
+      <p>If you’ve got any ideas, want to learn more or you’re interested in joining the team, let us know! We’re undertaking a massive project and we’re looking for as much support and collaboration as possible. Feel free to contact us and sign up to our mailing list:</p>
 
-      <button class="large gray fluid ui button" id="register">
+      <button class="large primary fluid ui button" id="register">
         Register your interest
       </button>
 
@@ -122,7 +150,7 @@
         <div class="ui two column stackable center aligned grid">
           <div class="middle aligned row">
             <div class="column">
-              <div class="ui header">Or talk to us directly:</div>
+              <div class="ui header">Or talk to us directly via:</div>
             </div>
             <div class="column">
               <div class="large vertical ui buttons">
@@ -151,7 +179,7 @@
   <div class="ui center aligned vertical footer segment">
     <div class="ui main text container">
       <div class="tiny header">THE OMNI PROJECT</div>
-      <a href="https://github.com/OmniProject/omni/blob/master/README.md" target="_blank">Whitepaper</a>
+      <a href="https://github.com/OmniProject/omni" target="_blank">GitHub</a> — <a href="https://github.com/OmniProject/omni/blob/master/README.md" target="_blank">Whitepaper</a>
       <br><br>
       <div>
         Co-Founders → <a href="http://www.linkedin.com/in/cameron-dowd" target="_blank">Cameron Dowd</a> & <a href="http://www.linkedin.com/in/marcusnewton2" target="_blank">Marcus Newton</a>
